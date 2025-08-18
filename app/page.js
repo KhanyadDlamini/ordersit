@@ -26,7 +26,60 @@ export default function Home() {
       : foodItems.filter((item) => item.category === selectedCategory);
 
   return (
-    <div className="font-sans min-h-screen flex flex-col bg-gradient-to-b from-zinc-900 via-zinc-800 to-red-900">
+    // <div className="font-sans min-h-screen flex flex-col bg-gradient-to-b from-zinc-900 via-zinc-800 to-red-900">
+    //   <TopNav
+    //     selectedCategory={selectedCategory}
+    //     onSelectCategory={setSelectedCategory}
+    //   />
+
+    //   <main className="pt-20 flex flex-1 max-w-7xl mx-auto w-full px-6 py-8 gap-6">
+    //     {/* Sidebar Categories (desktop only) */}
+    //     <div className="hidden sm:block">
+    //       <Categories
+    //         selected={selectedCategory}
+    //         onSelectCategory={setSelectedCategory}
+    //       />
+    //     </div>
+
+    //     {/* Food Items */}
+    //     <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    //       {filteredItems.map((item) => (
+    //         <div
+    //           key={item.id}
+    //           className="flex flex-col bg-zinc-900 rounded-xl overflow-hidden shadow hover:shadow-2xl transition transform hover:-translate-y-1 border border-red-700/30"
+    //         >
+    //           <div className="overflow-hidden">
+    //             <img
+    //               src={item.image}
+    //               alt={item.name}
+    //               className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+    //             />
+    //           </div>
+    //           <div className="p-4 flex flex-col flex-1">
+    //             <h3 className="text-lg font-semibold text-white">{item.name}</h3>
+    //             <p className="text-sm text-gray-300">{item.vendor}</p>
+    //             <p className="mt-2 text-lg font-bold text-red-500">E{item.price}</p>
+    //             <button
+    //               onClick={() => addToCart(item)}
+    //               className="mt-auto flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-lg"
+    //             >
+    //               <ShoppingCartIcon className="w-5 h-5" />
+    //               Place Order
+    //             </button>
+    //           </div>
+    //         </div>
+    //       ))}
+    //     </section>
+    //   </main>
+    // </div>
+    <div
+      className="font-sans min-h-screen flex flex-col"
+      style={{
+        background:
+          "linear-gradient(to bottom, #111827, #ffffff, #fef9c3, #facc15)",
+        // blackish → white → light mustard → deep mustard
+      }}
+    >
       <TopNav
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
@@ -46,7 +99,7 @@ export default function Home() {
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="flex flex-col bg-zinc-900 rounded-xl overflow-hidden shadow hover:shadow-2xl transition transform hover:-translate-y-1 border border-red-700/30"
+              className="flex flex-col bg-white/80 backdrop-blur-md rounded-xl overflow-hidden shadow hover:shadow-2xl transition transform hover:-translate-y-1 border border-yellow-500/30"
             >
               <div className="overflow-hidden">
                 <img
@@ -56,12 +109,14 @@ export default function Home() {
                 />
               </div>
               <div className="p-4 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-white">{item.name}</h3>
-                <p className="text-sm text-gray-300">{item.vendor}</p>
-                <p className="mt-2 text-lg font-bold text-red-500">E{item.price}</p>
+                <h3 className="text-lg font-semibold text-gray-900">{item.name}</h3>
+                <p className="text-sm text-gray-600">{item.vendor}</p>
+                <p className="mt-2 text-lg font-bold text-yellow-700">
+                  E{item.price}
+                </p>
                 <button
                   onClick={() => addToCart(item)}
-                  className="mt-auto flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-lg"
+                  className="mt-auto flex items-center justify-center gap-2 px-4 py-2 bg-yellow-600 text-white rounded-xl hover:bg-yellow-700 transition-all shadow-md hover:shadow-lg"
                 >
                   <ShoppingCartIcon className="w-5 h-5" />
                   Place Order
@@ -72,5 +127,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+
   );
 }

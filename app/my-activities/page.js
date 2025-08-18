@@ -144,11 +144,127 @@ export default function MyActivities() {
     };
 
     return (
-        <div className="font-sans min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-800 to-red-900">
+        // <div className="font-sans min-h-screen bg-gradient-to-b from-zinc-900 via-zinc-800 to-red-900">
+        //     <TopNav />
+
+        //     <main className="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-8">
+        //         <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-white text-center sm:text-left">
+        //         </h1>
+
+        //         {/* Search input */}
+        //         <div className="mb-6 sm:mb-8">
+        //             <input
+        //                 type="text"
+        //                 value={search}
+        //                 onChange={(e) => setSearch(e.target.value)}
+        //                 placeholder="Search by order number..."
+        //                 className="w-full sm:w-1/2 px-4 py-2 rounded-2xl bg-zinc-800 text-white border border-red-700/50 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400"
+        //             />
+        //         </div>
+
+        //         {filteredActivities.length === 0 ? (
+        //             <div className="flex flex-col items-center justify-center py-20 bg-zinc-900 rounded-xl shadow-md border border-red-700/30">
+        //                 <DocumentTextIcon className="w-16 h-16 text-red-600 mb-4" />
+        //                 <p className="text-gray-300 text-lg text-center">
+        //                     No orders found.
+        //                 </p>
+        //             </div>
+        //         ) : (
+        //             <div className="flex flex-col gap-4 sm:gap-6">
+        //                 {filteredActivities.map((activity) => {
+        //                     const total = activity.items.reduce(
+        //                         (acc, item) => acc + item.price * item.quantity,
+        //                         0
+        //                     );
+
+        //                     return (
+        //                         <div
+        //                             key={activity.id}
+        //                             className="bg-zinc-900 rounded-2xl shadow-md hover:shadow-2xl transition p-4 sm:p-6 border border-red-700/30"
+        //                         >
+        //                             {/* Order Header */}
+        //                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-red-700/20 pb-3 sm:pb-4 mb-3 sm:mb-4">
+        //                                 <h2 className="text-lg sm:text-xl font-semibold text-white flex items-center gap-2">
+        //                                     <DocumentTextIcon className="w-5 h-5 text-red-500" />
+        //                                     Order #{activity.id}
+        //                                 </h2>
+        //                                 <span
+        //                                     className={`mt-2 sm:mt-0 inline-flex items-center gap-1 px-3 py-1 text-sm rounded-full font-medium ${activity.status === "Completed"
+        //                                         ? "bg-green-900 text-green-400"
+        //                                         : "bg-red-900 text-red-400"
+        //                                         }`}
+        //                                 >
+        //                                     {activity.status === "Completed" ? (
+        //                                         <CheckCircleIcon className="w-4 h-4" />
+        //                                     ) : (
+        //                                         <ClockIcon className="w-4 h-4" />
+        //                                     )}
+        //                                     {activity.status}
+        //                                 </span>
+        //                             </div>
+
+        //                             {/* Order Items */}
+        //                             <div className="flex flex-col gap-2 sm:gap-3 mb-4">
+        //                                 {activity.items.map((item) => (
+        //                                     <div
+        //                                         key={item.id}
+        //                                         className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-zinc-800 p-3 sm:p-4 rounded-lg border border-red-700/20"
+        //                                     >
+        //                                         <div>
+        //                                             <p className="font-medium text-white">
+        //                                                 {item.name}
+        //                                             </p>
+        //                                             <p className="text-sm text-gray-400">
+        //                                                 x {item.quantity} • E{item.price}
+        //                                             </p>
+        //                                         </div>
+        //                                         <p className="font-semibold text-red-500 mt-2 sm:mt-0">
+        //                                             E{item.price * item.quantity}
+        //                                         </p>
+        //                                     </div>
+        //                                 ))}
+        //                             </div>
+
+        //                             {/* QR Code & Footer */}
+        //                             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-red-700/20 gap-4 sm:gap-0">
+        //                                 <div className="bg-zinc-900 p-2 rounded-lg shadow border border-red-700/30 inline-block">
+        //                                     <QRCodeReact value={activity.id.toString()} size={80} fgColor="#f87171" />
+        //                                 </div>
+
+        //                                 <p className="text-lg font-bold text-red-500 mt-2 sm:mt-0">
+        //                                     Total: E{total}
+        //                                 </p>
+        //                                 <p className="text-gray-400 text-sm mt-1 sm:mt-0">
+        //                                     {new Date(activity.id).toLocaleString()}
+        //                                 </p>
+
+        //                                 {/* Download Button */}
+        //                                 <button
+        //                                     onClick={() => downloadActivity(activity)}
+        //                                     className="ml-auto sm:ml-4 mt-2 sm:mt-0 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition shadow-md flex items-center gap-2"
+        //                                 >
+        //                                     Download PDF
+        //                                 </button>
+        //                             </div>
+        //                         </div>
+        //                     );
+        //                 })}
+        //             </div>
+        //         )}
+        //     </main>
+        // </div>
+        <div
+            className="font-sans min-h-screen"
+            style={{
+                background:
+                    "linear-gradient(to bottom, #111827, #ffffff, #fef9c3, #facc15)",
+            }}
+        >
             <TopNav />
 
             <main className="flex-1 max-w-3xl mx-auto w-full px-4 sm:px-6 py-6 sm:py-8">
-                <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-white text-center sm:text-left">
+                <h1 className="text-3xl sm:text-4xl font-bold mb-10 text-yellow-700 text-center sm:text-left">
+                    {/* My Orders */}
                 </h1>
 
                 {/* Search input */}
@@ -158,16 +274,14 @@ export default function MyActivities() {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         placeholder="Search by order number..."
-                        className="w-full sm:w-1/2 px-4 py-2 rounded-2xl bg-zinc-800 text-white border border-red-700/50 focus:outline-none focus:ring-2 focus:ring-red-600 placeholder-gray-400"
+                        className="w-full sm:w-1/2 px-4 py-2 rounded-2xl bg-white/80 text-gray-900 border border-yellow-500/40 focus:outline-none focus:ring-2 focus:ring-yellow-500 placeholder-gray-500"
                     />
                 </div>
 
                 {filteredActivities.length === 0 ? (
-                    <div className="flex flex-col items-center justify-center py-20 bg-zinc-900 rounded-xl shadow-md border border-red-700/30">
-                        <DocumentTextIcon className="w-16 h-16 text-red-600 mb-4" />
-                        <p className="text-gray-300 text-lg text-center">
-                            No orders found.
-                        </p>
+                    <div className="flex flex-col items-center justify-center py-20 bg-white/70 backdrop-blur rounded-xl shadow-md border border-yellow-500/30">
+                        <DocumentTextIcon className="w-16 h-16 text-yellow-600 mb-4" />
+                        <p className="text-gray-700 text-lg text-center">No orders found.</p>
                     </div>
                 ) : (
                     <div className="flex flex-col gap-4 sm:gap-6">
@@ -180,18 +294,18 @@ export default function MyActivities() {
                             return (
                                 <div
                                     key={activity.id}
-                                    className="bg-zinc-900 rounded-2xl shadow-md hover:shadow-2xl transition p-4 sm:p-6 border border-red-700/30"
+                                    className="bg-white/80 backdrop-blur rounded-2xl shadow-md hover:shadow-2xl transition p-4 sm:p-6 border border-yellow-500/30"
                                 >
                                     {/* Order Header */}
-                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-red-700/20 pb-3 sm:pb-4 mb-3 sm:mb-4">
-                                        <h2 className="text-lg sm:text-xl font-semibold text-white flex items-center gap-2">
-                                            <DocumentTextIcon className="w-5 h-5 text-red-500" />
+                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-yellow-500/20 pb-3 sm:pb-4 mb-3 sm:mb-4">
+                                        <h2 className="text-lg sm:text-xl font-semibold text-gray-900 flex items-center gap-2">
+                                            <DocumentTextIcon className="w-5 h-5 text-yellow-600" />
                                             Order #{activity.id}
                                         </h2>
                                         <span
                                             className={`mt-2 sm:mt-0 inline-flex items-center gap-1 px-3 py-1 text-sm rounded-full font-medium ${activity.status === "Completed"
-                                                ? "bg-green-900 text-green-400"
-                                                : "bg-red-900 text-red-400"
+                                                ? "bg-green-100 text-green-700"
+                                                : "bg-yellow-100 text-yellow-700"
                                                 }`}
                                         >
                                             {activity.status === "Completed" ? (
@@ -208,17 +322,15 @@ export default function MyActivities() {
                                         {activity.items.map((item) => (
                                             <div
                                                 key={item.id}
-                                                className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-zinc-800 p-3 sm:p-4 rounded-lg border border-red-700/20"
+                                                className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white/70 p-3 sm:p-4 rounded-lg border border-yellow-500/20"
                                             >
                                                 <div>
-                                                    <p className="font-medium text-white">
-                                                        {item.name}
-                                                    </p>
-                                                    <p className="text-sm text-gray-400">
+                                                    <p className="font-medium text-gray-900">{item.name}</p>
+                                                    <p className="text-sm text-gray-600">
                                                         x {item.quantity} • E{item.price}
                                                     </p>
                                                 </div>
-                                                <p className="font-semibold text-red-500 mt-2 sm:mt-0">
+                                                <p className="font-semibold text-yellow-700 mt-2 sm:mt-0">
                                                     E{item.price * item.quantity}
                                                 </p>
                                             </div>
@@ -226,22 +338,26 @@ export default function MyActivities() {
                                     </div>
 
                                     {/* QR Code & Footer */}
-                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-red-700/20 gap-4 sm:gap-0">
-                                        <div className="bg-zinc-900 p-2 rounded-lg shadow border border-red-700/30 inline-block">
-                                            <QRCodeReact value={activity.id.toString()} size={80} fgColor="#f87171" />
+                                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-yellow-500/20 gap-4 sm:gap-0">
+                                        <div className="bg-white p-2 rounded-lg shadow border border-yellow-500/30 inline-block">
+                                            <QRCodeReact
+                                                value={activity.id.toString()}
+                                                size={80}
+                                                fgColor="#eab308" // mustard yellow QR
+                                            />
                                         </div>
 
-                                        <p className="text-lg font-bold text-red-500 mt-2 sm:mt-0">
+                                        <p className="text-lg font-bold text-yellow-700 mt-2 sm:mt-0">
                                             Total: E{total}
                                         </p>
-                                        <p className="text-gray-400 text-sm mt-1 sm:mt-0">
+                                        <p className="text-gray-600 text-sm mt-1 sm:mt-0">
                                             {new Date(activity.id).toLocaleString()}
                                         </p>
 
                                         {/* Download Button */}
                                         <button
                                             onClick={() => downloadActivity(activity)}
-                                            className="ml-auto sm:ml-4 mt-2 sm:mt-0 px-4 py-2 bg-red-600 text-white rounded-xl hover:bg-red-700 transition shadow-md flex items-center gap-2"
+                                            className="ml-auto sm:ml-4 mt-2 sm:mt-0 px-4 py-2 bg-yellow-500 text-white rounded-xl hover:bg-yellow-600 transition shadow-md flex items-center gap-2"
                                         >
                                             Download PDF
                                         </button>
@@ -253,5 +369,6 @@ export default function MyActivities() {
                 )}
             </main>
         </div>
+
     );
 }

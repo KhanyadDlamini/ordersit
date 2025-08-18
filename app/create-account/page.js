@@ -49,14 +49,113 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center 
-      bg-gradient-to-b from-black via-red-900 to-black text-white">
+        //     <div className="min-h-screen flex items-center justify-center 
+        //   bg-gradient-to-b from-black via-red-900 to-black text-white">
 
-            <div className="w-full max-w-md bg-black/70 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-red-700">
+        //         <div className="w-full max-w-md bg-black/70 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-red-700">
 
+        //             {/* Welcome Text */}
+        //             <h1 className="text-3xl font-bold text-center mb-2">Register</h1>
+        //             <p className="text-center text-gray-300 mb-6">Create your account</p>
+
+        //             {/* Logo */}
+        //             <div className="flex justify-center mb-6">
+        //                 <img src="/ordersit.png" alt="App Logo" className="h-16 w-auto" />
+        //             </div>
+
+        //             {/* Form */}
+        //             <form onSubmit={handleRegister} className="space-y-4">
+        //                 {/* Username */}
+        //                 <div className="flex items-center bg-white/10 p-3 rounded-lg">
+        //                     <User className="w-5 h-5 text-red-500 mr-3" />
+        //                     <input
+        //                         type="text"
+        //                         placeholder="Username"
+        //                         value={username}
+        //                         onChange={(e) => setUsername(e.target.value)}
+        //                         className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+        //                     />
+        //                 </div>
+
+        //                 {/* Email */}
+        //                 <div className="flex items-center bg-white/10 p-3 rounded-lg">
+        //                     <Mail className="w-5 h-5 text-red-500 mr-3" />
+        //                     <input
+        //                         type="email"
+        //                         placeholder="Email"
+        //                         value={email}
+        //                         onChange={(e) => setEmail(e.target.value)}
+        //                         className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+        //                     />
+        //                 </div>
+
+        //                 {/* Phone */}
+        //                 <div className="flex items-center bg-white/10 p-3 rounded-lg">
+        //                     <Phone className="w-5 h-5 text-red-500 mr-3" />
+        //                     <input
+        //                         type="tel"
+        //                         placeholder="Phone Number"
+        //                         value={phone}
+        //                         onChange={(e) => setPhone(e.target.value)}
+        //                         className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+        //                     />
+        //                 </div>
+
+        //                 {/* Password with toggle */}
+        //                 <div className="flex items-center bg-white/10 p-3 rounded-lg relative">
+        //                     <Lock className="w-5 h-5 text-red-500 mr-3" />
+        //                     <input
+        //                         type={showPassword ? "text" : "password"}
+        //                         placeholder="Password"
+        //                         value={password}
+        //                         onChange={(e) => setPassword(e.target.value)}
+        //                         className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+        //                     />
+        //                     <button
+        //                         type="button"
+        //                         onClick={() => setShowPassword(!showPassword)}
+        //                         className="absolute right-3 text-gray-400 hover:text-white"
+        //                     >
+        //                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+        //                     </button>
+        //                 </div>
+
+        //                 {/* Submit Button */}
+        //                 <button
+        //                     type="submit"
+        //                     disabled={loading}
+        //                     className="w-full flex justify-center items-center py-3 px-4 rounded-lg 
+        //           bg-gradient-to-r from-red-600 via-orange-600 to-red-700 
+        //           hover:from-red-500 hover:to-orange-500 
+        //           font-semibold shadow-lg"
+        //                 >
+        //                     {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Register"}
+        //                 </button>
+        //                 <p className="text-center text-gray-400 text-sm">
+        //                     Already have account?{" "}
+        //                     <a href="/login" className="text-red-400 hover:text-orange-400 transition">
+        //                         Sign In
+        //                     </a>
+        //                 </p>
+        //             </form>
+
+        //             {/* Toasts */}
+        //             <ToastContainer position="top-center" autoClose={2000} />
+        //         </div>
+        //     </div>
+        <div
+            className="min-h-screen flex items-center justify-center text-gray-900"
+            style={{
+                background:
+                    "linear-gradient(to bottom, #111827, #ffffff, #fef9c3, #facc15)", // black → white → mustard gradient
+            }}
+        >
+            <div className="w-full max-w-md bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-lg border border-yellow-500/40">
                 {/* Welcome Text */}
-                <h1 className="text-3xl font-bold text-center mb-2">Register</h1>
-                <p className="text-center text-gray-300 mb-6">Create your account</p>
+                <h1 className="text-3xl font-bold text-center mb-2 text-yellow-700">
+                    Register
+                </h1>
+                <p className="text-center text-gray-600 mb-6">Create your account</p>
 
                 {/* Logo */}
                 <div className="flex justify-center mb-6">
@@ -66,55 +165,55 @@ export default function RegisterPage() {
                 {/* Form */}
                 <form onSubmit={handleRegister} className="space-y-4">
                     {/* Username */}
-                    <div className="flex items-center bg-white/10 p-3 rounded-lg">
-                        <User className="w-5 h-5 text-red-500 mr-3" />
+                    <div className="flex items-center bg-yellow-100/40 p-3 rounded-lg border border-black">
+                        <User className="w-5 h-5 text-yellow-600 mr-3" />
                         <input
                             type="text"
                             placeholder="Username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
-                            className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+                            className="bg-transparent w-full outline-none text-gray-900 placeholder-gray-500"
                         />
                     </div>
 
                     {/* Email */}
-                    <div className="flex items-center bg-white/10 p-3 rounded-lg">
-                        <Mail className="w-5 h-5 text-red-500 mr-3" />
+                    <div className="flex items-center bg-yellow-100/40 p-3 rounded-lg border border-black">
+                        <Mail className="w-5 h-5 text-yellow-600 mr-3" />
                         <input
                             type="email"
                             placeholder="Email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+                            className="bg-transparent w-full outline-none text-gray-900 placeholder-gray-500"
                         />
                     </div>
 
                     {/* Phone */}
-                    <div className="flex items-center bg-white/10 p-3 rounded-lg">
-                        <Phone className="w-5 h-5 text-red-500 mr-3" />
+                    <div className="flex items-center bg-yellow-100/40 p-3 rounded-lg border border-black">
+                        <Phone className="w-5 h-5 text-yellow-600 mr-3" />
                         <input
                             type="tel"
                             placeholder="Phone Number"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+                            className="bg-transparent w-full outline-none text-gray-900 placeholder-gray-500"
                         />
                     </div>
 
                     {/* Password with toggle */}
-                    <div className="flex items-center bg-white/10 p-3 rounded-lg relative">
-                        <Lock className="w-5 h-5 text-red-500 mr-3" />
+                    <div className="flex items-center bg-yellow-100/40 p-3 rounded-lg relative border border-black">
+                        <Lock className="w-5 h-5 text-yellow-600 mr-3" />
                         <input
                             type={showPassword ? "text" : "password"}
                             placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="bg-transparent w-full outline-none text-white placeholder-gray-400"
+                            className="bg-transparent w-full outline-none text-gray-900 placeholder-gray-500"
                         />
                         <button
                             type="button"
                             onClick={() => setShowPassword(!showPassword)}
-                            className="absolute right-3 text-gray-400 hover:text-white"
+                            className="absolute right-3 text-gray-500 hover:text-yellow-600"
                         >
                             {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                         </button>
@@ -125,15 +224,19 @@ export default function RegisterPage() {
                         type="submit"
                         disabled={loading}
                         className="w-full flex justify-center items-center py-3 px-4 rounded-lg 
-              bg-gradient-to-r from-red-600 via-orange-600 to-red-700 
-              hover:from-red-500 hover:to-orange-500 
-              font-semibold shadow-lg"
+          bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-600 
+          hover:from-yellow-400 hover:to-yellow-500 
+          font-semibold text-white shadow-lg transition-all"
                     >
                         {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Register"}
                     </button>
-                    <p className="text-center text-gray-400 text-sm">
+
+                    <p className="text-center text-gray-600 text-sm">
                         Already have account?{" "}
-                        <a href="/login" className="text-red-400 hover:text-orange-400 transition">
+                        <a
+                            href="/login"
+                            className="text-yellow-700 hover:text-yellow-500 transition font-medium"
+                        >
                             Sign In
                         </a>
                     </p>
@@ -143,5 +246,6 @@ export default function RegisterPage() {
                 <ToastContainer position="top-center" autoClose={2000} />
             </div>
         </div>
+
     );
 }
