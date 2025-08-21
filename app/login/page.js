@@ -33,7 +33,7 @@ export default function LoginPage() {
                 toast.success("✅ Vendor login successful!");
 
                 // await new Promise((res) => setTimeout(res, 1000));
-                // router.push("/vendor");
+                router.push("/vendor");
 
                 // Normal user login
             } else if (username === validUsername && password === validPassword) {
